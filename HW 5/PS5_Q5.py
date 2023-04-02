@@ -1,5 +1,5 @@
 
-def get_paths(m, n):
+def get_paths(m, n) -> list:
     if m == 1:
         return [[(0,k) for k in range(n)]]
     
