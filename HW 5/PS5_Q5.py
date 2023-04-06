@@ -1,5 +1,14 @@
 
 def get_paths(m, n) -> list:
+    """This function gets all possible paths with coordinates from (0,0) to the specified location
+
+    Args:
+        m (int): rows index
+        n (int): columns index
+
+    Returns:
+        list: list of all possible paths
+    """
     if m == 1:
         return [[(0,k) for k in range(n)]]
     
