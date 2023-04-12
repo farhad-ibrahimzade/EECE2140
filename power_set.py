@@ -1,16 +1,17 @@
 
-def get_power_set(A: set):
-    lst = list(A)
-    if lst == []:
-        return {}
+def get_power_set(A):
+    if len(A) == 0:
+        return [[]]
+
+    # subsets = get_power_set(A[1:])
+    # lst = []
+    # for subset in subsets:
+    #     lst.append(subset)
+    #     lst.append([A[0]] + subset)
+
+    lst = get_power_set(A[1:])
+    lst += [[A[0]] + subset for subset in lst]
     
-    if len(lst) == 1:
-        return A
+    return lst
 
-    output = []
-    output.extend(get_power_set(set(lst[:-1])))
-    output.extend(elem + lst[-1] for elem in get_power_set(set(lst[:-1])))
-
-    return set(output)
-
-print(get_power_set({1,2,3}))
+print(get_power_set([1,2,3]))

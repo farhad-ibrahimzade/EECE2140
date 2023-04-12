@@ -3,7 +3,7 @@ import os
 import sys
 
 
-fractions = open(os.path.join(sys.path[0], "fractions.txt"), "r")
+fractions = open(os.path.join(sys.path[0], "fractions.txt"))
 
 fractDict = {}
 
