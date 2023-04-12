@@ -13,7 +13,7 @@ class Library:
         Args:
             book (Book): book to add
         """
-        self.isbn_books[book.get_ISBN()] = book
+        self.isbn_books[book.getISBN()] = book
 
     def remove_book(self, isbn: str):
         """Removes a book from the library by ISBN
